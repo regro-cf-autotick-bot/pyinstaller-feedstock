@@ -1,13 +1,13 @@
 {% set name = "pyinstaller" %}
-{% set version = "6.22.0" %}
-{% set sha256 = "8b0166fff4583b374bbe7fa044bf03ddc33cab0f792a665807d96048e63f060e" %}
+{% set version = "6.22.1" %}
+{% set sha256 = "4e7ed495fccb9974d47cf72ef8cffc92afa05d60bc265c5585a68f3d229ca8d1" %}
 
 package:
   name: {{ name.lower() }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
   patches:
     - patches/0001-don-t-set-arch.patch
